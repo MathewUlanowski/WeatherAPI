@@ -5,3 +5,9 @@ this app will eventually take audio and do a speach to text translation feed tha
 1. clone the repo to your machine
 2. in visual studio right click the project "WebApi" and select Manage User Secrets
 3. create a json object inside of your secrets.json with your API key that follows the following schema
+```json
+"OpenAIServiceOptions": 
+{
+    "ApiKey": "Your API Key Here"
+}
+```
