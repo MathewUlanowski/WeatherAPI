@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  webapi:
+    container_name: Web-API
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+
+  redis:
+    container_name: Redis-Server
+    image: redis
+
+  UsersDatabase:
+    container_name: User-Database
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=Users
+    ports:
+      - "5432:5432"
+    restart: always

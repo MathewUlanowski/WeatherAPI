@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "redis": "StartWithoutDebugging",
+        "webapi": "StartDebugging"
+      }
+    },
+    "Start Redis Server": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "redis": "StartWithoutDebugging",
+        "webapi": "DoNotStart"
+      }
+    },
+    "Start Services": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "redis": "DoNotStart",
+        "webapi": "StartWithoutDebugging"
+      }
+    }
+  }
+}
