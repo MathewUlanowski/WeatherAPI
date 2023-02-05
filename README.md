@@ -4,7 +4,8 @@ this app will eventually take audio and do a speach to text translation feed tha
 # Installation
 1. clone the repo to your machine
 2. in visual studio right click the project "WebApi" and select Manage User Secrets
-3. create a json object inside of your secrets.json with your API key that follows the following schema
+3. go to and log into openAI and generate an API key which can be aquired from here https://platform.openai.com/account/api-keys
+4. create a json object inside of your secrets.json with your API key that follows the following schema
 ```json
 "OpenAIServiceOptions": 
 {
